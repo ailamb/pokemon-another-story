@@ -1,0 +1,2 @@
+// Default background image if none is specified
+export const TEST_CG_URL = "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1536,f=jpeg,q=85/posts/images/699751645688397825/78866d0b-fbcd-4361-8101-9e38a61df36c.jpg";

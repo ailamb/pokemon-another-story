@@ -1,0 +1,250 @@
+import { StorySegment, HistoryItem } from '../types';
+
+// Initial Chapter Image integrated here for easy editing
+export const CHAPTER_IMAGE = "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1536,f=jpeg,q=85/posts/images/699751645688397825/e605dae4-4c4e-4dd9-87e3-ebbbb3a9759f.png";
+
+/**
+ * SCRIPT DATA
+ * Edit this object to add your story content.
+ */
+const SCRIPT_NODES: Record<string, StorySegment> = {
+  // Intro
+  'start': { id: 'start', speaker: "旁白", text: "森林深處的空地，陽光透過茂密樹葉灑下斑駁光影，空氣中瀰漫著泥土濕潤與野花清香的混合氣息，但隱隱夾雜著危險與緊張的氛圍。", backgroundImage: CHAPTER_IMAGE, nextId: "s2" },
+  's2': { id: 's2', speaker: "旁白", text: "瑟蕾娜勉強站立，金色長髮凌亂披散，胸口因劇烈喘息而起伏不定，汗水沿著頸項緩緩滑落。", nextId: "s3" },
+  's3': { id: 's3', speaker: "旁白", text: "她的寶可夢夥伴全部敗北，精靈球散落四周，已無力再戰，周圍的樹影中隱藏著敵意。", nextId: "s4" },
+  's4': { id: 's4', speaker: "旁白", text: "一群身材魁梧、穿著破舊冒險裝的壞訓練師圍成半圈，他們眼神貪婪而獰笑，手持勝利後的精靈球。", nextId: "s5" },
+  's5': { id: 's5', speaker: "訓練師首領", text: "嘿，小美女，你的寶可夢真弱，輸得一塌糊塗啊。", nextId: "s6" },
+  's6': { id: 's6', speaker: "訓練師首領", text: "這樣吧，我們也不想太欺負人。", nextId: "s7" },
+  's7': { id: 's7', speaker: "訓練師首領", text: "把衣服全脫光，讓我們好好欣賞你這誘人身子。", nextId: "s8" },
+  's8': { id: 's8', speaker: "訓練師首領", text: "看個夠就放你離開，絕對不食言。", nextId: "s9" },
+  's9': { id: 's9', speaker: "瑟蕾娜", text: "（咬緊下唇，眼神驚恐）……真的只看不碰嗎？", nextId: "s10" },
+  's10': { id: 's10', speaker: "訓練師首領", text: "當然，我們是訓練師，講信用。", nextId: "s11" },
+  's11': { id: 's11', speaker: "瑟蕾娜", text: "（聲音微微發顫，雙手緊握）……好，我脫就是了。", nextId: "s12" },
+  's12': { id: 's12', speaker: "旁白", text: "她緩緩從站直身子，雙腿因疲憊而微微發軟，陽光照射在她汗濕的肌膚上，反射出晶瑩誘人的光澤。", nextId: "s13" },
+  's13': { id: 's13', speaker: "旁白", text: "訓練師們的呼吸逐漸變得粗重，眼神如餓狼般鎖定在她每一個動作上，空氣中瀰漫著壓抑的興奮。", nextId: "s14" },
+  's14': { id: 's14', speaker: "旁白", text: "她深吸一口氣，試圖平復內心羞恥，先伸手抓住短裙的兩側邊緣，指尖因緊張而微微顫抖。", nextId: "s15" },
+  's15': { id: 's15', speaker: "旁白", text: "短裙布料輕柔滑過雪白大腿肌膚，緩緩往下拉扯，露出修長雙腿的優美曲線與隱隱的肌肉線條。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/a51de2a5-3f7f-4769-8e73-8721c833300d.png", nextId: "s16" },
+  's16': { id: 's16', speaker: "旁白", text: "短裙堆積到纖細腳踝處，純白小內褲完全暴露在陽光下，細帶微微陷入圓潤臀部，勾勒出誘人輪廓。", nextId: "s17" },
+  's17': { id: 's17', speaker: "訓練師A", text: "哇，這雙腿又長又直，皮膚白得像牛奶一樣。", nextId: "s18" },
+  's18': { id: 's18', speaker: "訓練師B", text: "真想摸摸看，肯定滑溜溜的。", nextId: "s19" },
+  's19': { id: 's19', speaker: "瑟蕾娜", text: "（臉頰緋紅，聲音低啞）別……別盯著說這些。", nextId: "s20" },
+  's20': { id: 's20', speaker: "旁白", text: "她雙臂本能抱住胸前，試圖遮掩暴露的肌膚，但這動作反而更凸顯出她纖細腰肢與豐滿曲線的誘惑。", nextId: "s21" },
+  's21': { id: 's21', speaker: "旁白", text: "接著，她猶豫片刻，抓住低胸背心的下擺邊緣，指尖用力捏緊布料，內心掙扎如潮水般湧來。", nextId: "s22" },
+  's22': { id: 's22', speaker: "旁白", text: "背心慢慢被往上掀起，露出平坦光滑的小腹與纖細腰線，陽光灑在肌膚上，泛起細膩的珠光般光澤。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/abdc8f8c-57b9-49f5-9c31-17785923074d.png", nextId: "s23" },
+  's23': { id: 's23', speaker: "旁白", text: "豐滿胸部隨著布料離開而輕輕彈跳晃動，背心完全脫下，被隨手扔到草地一旁，發出輕微落地聲。", nextId: "s24" },
+  's24': { id: 's24', speaker: "旁白", text: "現在她僅剩粉色胸罩與純白內褲，胸罩邊緣微微勒緊飽滿乳肉，隱約透出粉嫩輪廓。", nextId: "s25" },
+  's25': { id: 's25', speaker: "瑟蕾娜", text: "（聲音越來越小，眼神閃躲）快……快看完吧，我受不了了。", nextId: "s26" },
+  's26': { id: 's26', speaker: "旁白", text: "壞訓練師們的低語與笑聲逐漸放大，他們往前湊近幾步，熱息幾乎噴灑到她裸露的肌膚上。", nextId: "s27" },
+  's27': { id: 's27', speaker: "旁白", text: "她緊閉雙眼，強忍羞恥，伸手伸到背後摸索胸罩的扣環，指尖在光滑後背上滑動，尋找那小小的金屬扣。", nextId: "s28" },
+  's28': { id: 's28', speaker: "旁白", text: "指尖終於找到扣子，輕輕一壓，「啪」的一聲輕響迴盪在寧靜森林中，扣環瞬間解開鬆脫。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/bfe90166-5653-4e81-93c6-216c2f003074.png", nextId: "s29" },
+  's29': { id: 's29', speaker: "旁白", text: "胸罩肩帶緩緩從圓潤肩頭滑落，布料失去支撐，往前微微傾斜，露出更多雪白乳肉的誘人弧度。", nextId: "s30" },
+  's30': { id: 's30', speaker: "旁白", text: "胸罩完全掉落地面，兩團雪白飽滿的乳房徹底彈跳而出，在陽光下晃動不止，泛起柔軟波浪。", nextId: "s31" },
+  's31': { id: 's31', speaker: "旁白", text: "粉嫩乳頭在涼爽微風中微微顫抖挺立，像兩顆嬌羞的櫻桃，陽光照射下反射出粉紅光暈。", nextId: "s32" },
+  's32': { id: 's32', speaker: "旁白", text: "乳溝深邃誘人，乳肉表面細膩如絲綢般光滑，整個上身毫無遮掩地暴露在眾目睽睽之下。", nextId: "s33" },
+  's33': { id: 's33', speaker: "訓練師A", text: "天啊，這對奶子又大又圓，形狀完美無缺！", nextId: "s34" },
+  's34': { id: 's34', speaker: "訓練師C", text: "乳頭還是粉粉的，肯定沒被碰過多少次。", nextId: "s35" },
+  's35': { id: 's35', speaker: "瑟蕾娜", text: "（耳根紅透欲滴，聲音帶哭腔）不要……不要這樣盯著評論……", nextId: "s36" },
+  's36': { id: 's36', speaker: "旁白", text: "她雙臂本能抬起抱住胸前，試圖遮擋暴露的雙乳，但指縫間溢出的乳肉反而更添誘惑，肌膚因羞恥而泛起細密雞皮疙瘩。", nextId: "s37" },
+  's37': { id: 's37', speaker: "旁白", text: "最後，她低頭凝視自己僅剩的純白內褲，內心如火燒般煎熬，手指停在細帶邊緣，猶豫了好幾秒鐘。", nextId: "s38" },
+  's38': { id: 's38', speaker: "旁白", text: "終於，她咬緊牙關，雙手勾住內褲兩側細帶，用力往下緩緩拉扯，布料摩擦肌膚發出細微沙沙聲。", nextId: "s39" },
+  's39': { id: 's39', speaker: "旁白", text: "純白布料滑過圓潤臀部曲線，露出光潔無毛的恥丘區域，陽光灑落其上，反射出潔白無瑕的光芒。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/fa3f9aef-d026-4b44-b396-a0b943983df8.png", nextId: "s40" },
+  's40': { id: 's40', speaker: "旁白", text: "內褲最終掉落到纖細腳邊，她已完全赤裸，雪白胴體在森林陽光下展露無遺，每一寸肌膚都如藝術品般完美。", nextId: "s41" },
+  's41': { id: 's41', speaker: "旁白", text: "從修長頸項到纖細腰肢，再到圓潤臀部與雙腿，曲線優美誘人，陽光勾勒出誘惑陰影，讓周圍空氣仿佛凝固。", nextId: "s42" },
+  's42': { id: 's42', speaker: "瑟蕾娜", text: "（聲音顫抖不止，雙手試圖遮掩）看……看夠了沒？求求你們，可以讓我走了吧？", nextId: "s43" },
+  's43': { id: 's43', speaker: "旁白", text: "她微微彎下腰肢，準備從草地撿起散落的衣服，手指伸向最近的短裙，動作小心翼翼避免更多暴露。", nextId: "s44" },
+  's44': { id: 's44', speaker: "旁白", text: "就在這一刻，空氣中突然一陣風動，一雙粗壯有力的手臂從背後猛然伸出，如鐵鉗般迅捷。", nextId: "s45" },
+  's45': { id: 's45', speaker: "旁白", text: "一對粗壯的手臂瞬間抓住她纖細雙腕，用力向上拉扯，讓她上身完全挺直，無法動彈分毫。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/c276d0b0-9814-4a02-9a00-4302d5404077.png", nextId: "s46" },
+  's46': { id: 's46', speaker: "旁白", text: "同時，一具滾燙結實的男性胸膛緊緊貼上她光滑後背，熱度透過肌膚傳來，讓她全身一震。", nextId: "s47" },
+  's47': { id: 's47', speaker: "瑟蕾娜", text: "（驚恐尖叫，拼命掙扎）這跟說好的不一樣！！放開我！", nextId: "s48" },
+  's48': { id: 's48', speaker: "瑟蕾娜", text: "你們明明說好只看不碰的！！這是騙局！", nextId: "s49" },
+  's49': { id: 's49', speaker: "訓練師首領", text: "（貼在她耳後，低沉笑聲熱息噴灑）誰說不碰了？我們只是說看夠放你。", nextId: "s50" },
+  's50': { id: 's50', speaker: "訓練師首領", text: "但這麼完美的身子，奶子又大又軟，怎麼可能不摸摸看？", nextId: "s51" },
+  's51': { id: 's51', speaker: "旁白", text: "粗糙大手從下方繞到身體前方，動作毫不猶豫，直接抓住她豐滿飽滿的雙乳。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/121f0f13-24d5-40c0-8051-fba2b76948e9.png", nextId: "s52" },
+  's52': { id: 's52', speaker: "旁白", text: "十指如鉗子般深深陷入柔軟乳肉中，用力揉捏拉扯，讓乳房形狀不斷變形，溢出指縫的嫩肉顫抖不止。", nextId: "s53" },
+  's53': { id: 's53', speaker: "旁白", text: "揉捏力度逐漸加大，乳肉被擠壓得泛起紅暈，肌膚表面因摩擦而微微發燙，空氣中響起細微的肉體摩擦聲。", nextId: "s54" },
+  's54': { id: 's54', speaker: "瑟蕾娜", text: "啊啊——！不要摸那裡！快放開我，好痛……好羞恥！", nextId: "s55" },
+  's55': { id: 's55', speaker: "旁白", text: "大手突然猛力往乳房中間一擠，力度如擰乾般強勁，讓乳肉徹底變形。", nextId: "s56" },
+  's56': { id: 's56', speaker: "旁白", text: "兩道雪白溫熱的乳汁從粉嫩腫脹的乳頭激射而出，在陽光下閃耀晶瑩光芒。", nextId: "s57" },
+  's57': { id: 's57', speaker: "旁白", text: "乳汁在空中劃出優美弧線，如細雨般灑落草地，濺起細小水花與泥土混合的濕潤痕跡。", nextId: "s58" },
+  's58': { id: 's58', speaker: "旁白", text: "大量乳汁狂噴不止，像兩道不受控制的噴泉，源源不斷從乳頭湧出，噴灑高度達數十厘米。", nextId: "s59" },
+  's59': { id: 's59', speaker: "旁白", text: "乳汁順著胸前滑落，染濕平坦小腹與大腿內側，甚至濺到訓練師的手臂上，留下黏膩濕滑的白色液體。", nextId: "s60" },
+  's60': { id: 's60', speaker: "旁白", text: "空氣瞬間瀰漫濃郁甜膩的奶香味，混合森林清新氣息，形成奇異而誘人的氛圍，讓周圍訓練師們呼吸更急促。", nextId: "s61" },
+  's61': { id: 's61', speaker: "瑟蕾娜", text: "哈啊……怎麼會這樣……奶水出來了……好多……", nextId: "s62" },
+  's62': { id: 's62', speaker: "瑟蕾娜", text: "停……停不下來……為什麼會噴这么多……好羞恥……！", nextId: "s63" },
+  's63': { id: 's63', speaker: "旁白", text: "訓練師首領的粗壯手臂牢牢扣住瑟蕾娜反折的雙腕，讓她上身挺直無法掙脫。", nextId: "s64" },
+  's64': { id: 's64', speaker: "旁白", text: "他另一隻手粗暴地分開她雪白圓潤的臀瓣，露出粉嫩濕潤的私處。", nextId: "s65" },
+  's65': { id: 's65', speaker: "旁白", text: "早已勃起腫脹的巨大肉棒抵在穴口，滾燙龜頭輕輕摩擦陰唇，讓她全身一顫。", nextId: "s66" },
+  's66': { id: 's66', speaker: "瑟蕾娜", text: "不要……求你……那裡不行……太大了……會壞掉的！", nextId: "s67" },
+  's67': { id: 's67', speaker: "訓練師首領", text: "（低笑）小騷貨，剛才奶水噴得那麼爽，下面肯定也饑渴得很。", nextId: "s68" },
+  's68': { id: 's68', speaker: "旁白", text: "話音未落，他腰部猛力一挺，粗長肉棒強行撐開緊窄蜜穴，一寸寸深深沒入。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1536,f=jpeg,q=85/posts/images/699751645688397825/57a0ff36-d45d-4c86-8fff-d7c8425334f7.png", nextId: "s69" },
+  's69': { id: 's69', speaker: "旁白", text: "龜頭撞開層層褶皺，直頂到最深處的花心，讓她子宮口被重重撞擊。", nextId: "s70" },
+  's70': { id: 's70', speaker: "瑟蕾娜", text: "啊啊啊啊——！！！好痛！裂開了！拔出去……求求你拔出去！！", nextId: "s71" },
+  's71': { id: 's71', speaker: "旁白", text: "她淚水奪眶而出，哭叫聲在森林中迴盪，雙腿劇烈顫抖幾乎站不住。", nextId: "s72" },
+  's72': { id: 's72', speaker: "旁白", text: "巨大肉棒完全沒入後，他開始緩緩抽動，每一次拔出都帶出晶瑩愛液。", nextId: "s73" },
+  's73': { id: 's73', speaker: "旁白", text: "粗硬棒身摩擦敏感內壁，帶來撕裂般的脹痛與異樣的充實感。", nextId: "s74" },
+  's74': { id: 's74', speaker: "瑟蕾娜", text: "嗚……不要動……好脹……會壞掉的……（淚水滑落臉頰）", nextId: "s75" },
+  's75': { id: 's75', speaker: "旁白", text: "抽插漸漸加快，肉棒次次重重撞擊深處，發出咕啾咕啾的淫靡水聲。", nextId: "s76" },
+  's76': { id: 's76', speaker: "旁白", text: "起初的劇痛慢慢轉化，一股奇異的熱流從下腹升起，逐漸蔓延全身。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/52de0ba5-5f03-448e-b2a4-b7dfe9b42869.png", nextId: "s77" },
+  's77': { id: 's77', speaker: "旁白", text: "敏感內壁被粗暴摩擦，快感如電流般竄過脊椎，讓她哭叫聲變得斷斷續續。", nextId: "s78" },
+  's78': { id: 's78', speaker: "瑟蕾娜", text: "哈啊……嗯……怎麼……開始變得……奇怪了……不要……", nextId: "s79" },
+  's79': { id: 's79', speaker: "旁白", text: "她雙腿無力地發抖，蜜穴開始不自覺收縮，緊緊絞住入侵的肉棒。", nextId: "s80" },
+  's80': { id: 's80', speaker: "旁白", text: "訓練師首領伸手繞到她面前，將兩根粗糙手指強行塞進她紅腫小嘴。", nextId: "s81" },
+  's81': { id: 's81', speaker: "旁白", text: "手指壓住柔軟舌頭，深入口腔攪動，沾滿她香甜的口水。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/76f744b7-d6aa-4355-9c67-663a0f5e3e3b.png", nextId: "s82" },
+  's82': { id: 's82', speaker: "瑟蕾娜", text: "（含糊）嗯咕……不要……手指……髒……", nextId: "s83" },
+  's83': { id: 's83', speaker: "旁白", text: "但下一秒，她舌頭卻本能地纏上手指，輕輕舔舐起來，像在品嘗什麼。", nextId: "s84" },
+  's84': { id: 's84', speaker: "旁白", text: "舌尖靈巧地掃過指縫與指腹，甚至主動吸吮，讓手指濕亮閃耀。", nextId: "s85" },
+  's85': { id: 's85', speaker: "訓練師首領", text: "哈哈，看你舔得多起勁，小嘴真會吸。", nextId: "s86" },
+  's86': { id: 's86', speaker: "旁白", text: "後方抽插越來越猛烈，肉棒次次撞擊子宮口，發出響亮啪啪聲。", nextId: "s87" },
+  's87': { id: 's87', speaker: "旁白", text: "快感如潮水般湧來，她哭叫聲逐漸轉為破碎的嬌喘與呻吟。", nextId: "s88" },
+  's88': { id: 's88', speaker: "瑟蕾娜", text: "啊啊……好深……頂到了……不行……要去了……", nextId: "s89" },
+  's89': { id: 's89', speaker: "旁白", text: "訓練師首領低吼一聲，腰部猛挺到底，肉棒在蜜穴深處劇烈脈動。", nextId: "s90" },
+  's90': { id: 's90', speaker: "旁白", text: "滾燙濃稠的精液強勁噴射，一股股灌滿子宮與內壁，溢出穴口。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/e265987a-d526-4c3d-a4cd-8ad09ba2c601.png", nextId: "s91" },
+  's91': { id: 's91', speaker: "旁白", text: "同時，瑟蕾娜全身猛然弓起，蜜穴劇烈痙攣絞緊，達到激烈高潮。", nextId: "s92" },
+  's92': { id: 's92', speaker: "旁白", text: "兩道乳汁從腫脹乳頭狂噴而出，灑落草地與自己大腿，形成白色水窪。", nextId: "s93" },
+  's93': { id: 's93', speaker: "瑟蕾娜", text: "啊啊啊啊——！！！射進來了……好燙……我也……去了！！！", nextId: "s94" },
+  's94': { id: 's94', speaker: "旁白", text: "高潮後，她雙腿發軟跪倒，訓練師首領抽出肉棒，精液混愛液順腿流下。", nextId: "s95" },
+  's95': { id: 's95', speaker: "旁白", text: "她無力地扶住附近一棵粗壯樹幹，彎腰喘息，臀部不自覺翹起。", nextId: "s96" },
+  's96': { id: 's96', speaker: "旁白", text: "另一名訓練師B迫不及待上前，從後方抓住她纖腰，對準濕潤穴口。", nextId: "s97" },
+  's97': { id: 's97', speaker: "訓練師B", text: "輪到我了，小美女，屁股翹得真誘人。", nextId: "s98" },
+  's98': { id: 's98', speaker: "旁白", text: "粗硬肉棒一挺到底，輕鬆滑入滿是精液的蜜穴，發出咕啾巨響。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/636801c5-9e56-4508-b1fb-1014879f47f6.png", nextId: "s99" },
+  's99': { id: 's99', speaker: "瑟蕾娜", text: "哈啊……又進來了……不要……剛剛才……", nextId: "s100" },
+  's100': { id: 's100', speaker: "旁白", text: "他雙手用力揉捏她圓潤臀肉，指尖陷入嫩肉，開始猛烈抽插。", nextId: "s101" },
+  's101': { id: 's101', speaker: "旁白", text: "肉棒在精液潤滑下進出順暢，次次撞擊最深，發出響亮肉體撞擊聲。", nextId: "s102" },
+  's102': { id: 's102', speaker: "旁白", text: "瑟蕾娜扶樹的手指用力抓緊樹皮，指節發白，身體前後搖晃。", nextId: "s103" },
+  's103': { id: 's103', speaker: "旁白", text: "快感再次累積，她呻吟聲越來越大，乳汁從晃動雙乳滴落不止。", nextId: "s104" },
+  's104': { id: 's104', speaker: "旁白", text: "訓練師B突然抱起她雙腿，將她整個人壓倒在柔軟草地上。", nextId: "s105" },
+  's105': { id: 's105', speaker: "旁白", text: "她臉頰貼地，金髮散亂覆蓋半張臉，嘴邊沾滿泥土與草葉。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/cb18eeda-6705-4619-a06b-c940a4a89501.png", nextId: "s106" },
+  's106': { id: 's106', speaker: "旁白", text: "臀部被強行高高翹起，呈現極度羞恥的後入姿勢，私處完全暴露。", nextId: "s107" },
+  's107': { id: 's107', speaker: "訓練師B", text: "這樣幹得更深，看你這小屁股翹得多高。", nextId: "s108" },
+  's108': { id: 's108', speaker: "旁白", text: "他跪在她身後，肉棒對準穴口，猛力貫穿到底，開始狂野衝刺。", nextId: "s109" },
+  's109': { id: 's109', speaker: "旁白", text: "每一次撞擊都讓她身體往前滑動，臉頰在泥土上摩擦，發出細微聲響。", nextId: "s110" },
+  's110': { id: 's110', speaker: "旁白", text: "粗硬棒身摩擦敏感點，快感如海嘯般襲來，讓她哭叫中夾雜嬌喘。", nextId: "s111" },
+  's111': { id: 's111', speaker: "瑟蕾娜", text: "啊啊……臉貼地了……好髒……但好深……頂得好用力……", nextId: "s112" },
+  's112': { id: 's112', speaker: "旁白", text: "抽插越來越快，肉棒在蜜穴內劇烈膨脹，預示即將爆發。", nextId: "s113" },
+  's113': { id: 's113', speaker: "旁白", text: "訓練師B低吼一聲，腰部猛挺，精液再次強勁噴射灌滿深處。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/4a349c59-518f-4efe-9b36-4710dba4bf47.png", nextId: "s114" },
+  's114': { id: 's114', speaker: "旁白", text: "瑟蕾娜同時達到第二次高潮，全身痙攣，蜜穴緊縮噴出大量愛液。", nextId: "s115" },
+  's115': { id: 's115', speaker: "旁白", text: "乳汁從乳頭狂噴，灑在草地與自己臉旁，形成濕潤奶香區域。", nextId: "s116" },
+  's116': { id: 's116', speaker: "瑟蕾娜", text: "又……又去了……射進來了……全身都麻了……", nextId: "s117" },
+  's117': { id: 's117', speaker: "旁白", text: "射精結束後，訓練師B抽出肉棒，精液從穴口汩汩流出，染濕草地。", nextId: "s118" },
+  's118': { id: 's118', speaker: "旁白", text: "瑟蕾娜仍保持臉貼地面、臀部高翹的姿勢，無法動彈分毫。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/4c9974b8-2f3f-4bbc-85de-194dd27ad039.png", nextId: "s119" },
+  's119': { id: 's119', speaker: "旁白", text: "她雙眼含淚，金髮凌亂沾滿泥土與草葉，臉頰緋紅而狼狽。", nextId: "s120" },
+  's120': { id: 's120', speaker: "旁白", text: "精液與愛液順著大腿內側緩緩滑落，乳汁從乳頭滴落不止。", nextId: "s121" },
+  's121': { id: 's121', speaker: "旁白", text: "身體仍在高潮餘韻中輕顫，蜜穴微微抽搐，散發濃郁淫靡氣味。", nextId: "s122" },
+  's122': { id: 's122', speaker: "瑟蕾娜", text: "（哭聲斷斷續續）嗚……怎麼會變成這樣……我好髒……", nextId: "s123" },
+  's123': { id: 's123', speaker: "瑟蕾娜", text: "明明說好只看……卻被……被輪流進去……好羞恥……", nextId: "s124" },
+  's124': { id: 's124', speaker: "瑟蕾娜", text: "（淚水滑落泥土）對不起……我太沒用了……完全抵抗不了……", nextId: "s125" },
+  's125': { id: 's125', speaker: "旁白", text: "她趴在地上，臀部高翹的姿勢充滿屈辱，淚水與乳汁混雜草地。", nextId: "s126" },
+  's126': { id: 's126', speaker: "旁白", text: "森林陽光依舊斑駁灑落，映照她滿是精液與泥土的雪白胴體。", nextId: "s127" },
+  's127': { id: 's127', speaker: "旁白", text: "周圍訓練師們的笑聲與喘息迴盪，預示著下一輪的開始。", nextId: "s128" },
+  's128': { id: 's128', speaker: "旁白", text: "森林空地中，陽光依舊斑駁，草地已被乳汁與精液染得濕漉一片，空氣濃郁而淫靡。", nextId: "s129" },
+  's129': { id: 's129', speaker: "旁白", text: "瑟蕾娜仍趴在地上，臀部高翹，蜜穴微微張開，精液緩緩流出，混雜愛液形成黏膩絲線。", nextId: "s130" },
+  's130': { id: 's130', speaker: "旁白", text: "第三位訓練師C迫不及待上前，粗硬肉棒對準濕潤穴口，龜頭輕輕頂撞陰唇。", nextId: "s131" },
+  's131': { id: 's131', speaker: "訓練師C", text: "小騷貨，裡面已經濕成這樣，還裝什麼純？", nextId: "s132" },
+  's132': { id: 's132', speaker: "訓練師C", text: "看我一插就讓你再噴一次！", nextId: "s133" },
+  's133': { id: 's133', speaker: "旁白", text: "他抓住她纖腰，腰部猛力一挺，粗長肉棒整根沒入滿是精液的深處，發出咕啾巨響。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/e1ae06e9-f345-46c1-b49e-0a41fc63d9d4.png", nextId: "s134" },
+  's134': { id: 's134', speaker: "旁白", text: "敏感內壁剛被撐開，一陣劇烈電流瞬間竄遍全身，讓她全身毛孔張開。", nextId: "s135" },
+  's135': { id: 's135', speaker: "瑟蕾娜", text: "啊啊啊啊——！！！剛進來就……要去了……不要啊！！！", nextId: "s136" },
+  's136': { id: 's136', speaker: "瑟蕾娜", text: "（哭叫顫抖）太敏感了……一插就高潮……我不要再去了……！", nextId: "s137" },
+  's137': { id: 's137', speaker: "旁白", text: "她全身猛然痙攣，蜜穴緊縮絞住肉棒，達到極速而激烈的第一次高潮。", nextId: "s138" },
+  's138': { id: 's138', speaker: "旁白", text: "大量透明愛液噴灑而出，乳汁從腫脹乳頭狂噴，灑落地面與自己大腿內側。", nextId: "s139" },
+  's139': { id: 's139', speaker: "訓練師C", text: "哈哈，才插進去你就噴了？真他媽敏感！", nextId: "s140" },
+  's140': { id: 's140', speaker: "訓練師C", text: "哭什麼？明明爽得全身在抖！", nextId: "s141" },
+  's141': { id: 's141', speaker: "瑟蕾娜", text: "（淚水滑落）嗚……不要說……我不想高潮……已經太多次了……", nextId: "s142" },
+  's142': { id: 's142', speaker: "旁白", text: "訓練師C毫不憐惜，開始猛烈抽插，每一下都重重撞擊最敏感的花心。", nextId: "s143" },
+  's143': { id: 's143', speaker: "旁白", text: "快感連續不斷，她哭聲中夾雜破碎呻吟，身體不由自主往前挺。", nextId: "s144" },
+  's144': { id: 's144', speaker: "訓練師C", text: "叫大聲點，讓大家聽聽你有多浪！", nextId: "s145" },
+  's145': { id: 's145', speaker: "旁白", text: "抽插越來越快，他低吼一聲，猛然抽出濕亮肉棒。", nextId: "s146" },
+  's146': { id: 's146', speaker: "訓練師C", text: "射在你這白背上，讓你全身都是我們的味道！", nextId: "s147" },
+  's147': { id: 's147', speaker: "旁白", text: "滾燙精液強勁噴射，全數射在她雪白光滑的背部、腰窩與臀溝。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/a2d0f21d-5267-464c-b114-c5a871b15f10.png", nextId: "s148" },
+  's148': { id: 's148', speaker: "旁白", text: "濃稠白濁沿著脊椎緩緩滑落，染濕散亂金髮與臀肉，形成大片黏膩痕跡。", nextId: "s149" },
+  's149': { id: 's149', speaker: "訓練師A", text: "看這背射得真美，像畫了幅白地圖。", nextId: "s150" },
+  's150': { id: 's150', speaker: "瑟蕾娜", text: "哈啊……好燙……背上全是……好黏……好髒……", nextId: "s151" },
+  's151': { id: 's151', speaker: "旁白", text: "第四位訓練師D走近，將她虛弱身體翻轉側躺，動作粗魯卻熟練。", nextId: "s152" },
+  's152': { id: 's152', speaker: "訓練師D", text: "換個姿勢，抱著你的腿好好幹。", nextId: "s153" },
+  's153': { id: 's153', speaker: "旁白", text: "他抱起她一條雪白長腿，高高架在自己肩上，成側位姿勢，完全暴露私處。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/53aba0ed-202c-411c-bb3d-bc4c0367dfd8.png", nextId: "s154" },
+  's154': { id: 's154', speaker: "訓練師D", text: "腿張開點，讓我看清楚這小穴有多濕。", nextId: "s155" },
+  's155': { id: 's155', speaker: "旁白", text: "粗長肉棒對準仍抽搐的蜜穴，緩緩推入，輕鬆滑進滿是精液的潤滑內壁。", nextId: "s156" },
+  's156': { id: 's156', speaker: "瑟蕾娜", text: "（眼神迷離，低聲）又來了……已經……沒力氣反抗了……", nextId: "s157" },
+  's157': { id: 's157', speaker: "瑟蕾娜", text: "（輕喘）隨便你們吧……我……我認了……", nextId: "s158" },
+  's158': { id: 's158', speaker: "旁白", text: "她逐漸放棄掙扎，身體本能迎合，臀部微微扭動配合他的節奏。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/80494513-3086-4cb0-ba8d-85b878c8af9d.png", nextId: "s159" },
+  's159': { id: 's159', speaker: "訓練師D", text: "哦？終於想通了？開始享受了啊？", nextId: "s160" },
+  's160': { id: 's160', speaker: "訓練師D", text: "腰扭得真騷，裡面吸得我好緊！", nextId: "s161" },
+  's161': { id: 's161', speaker: "瑟蕾娜", text: "嗯啊……好深……頂到了……舒服……", nextId: "s162" },
+  's162': { id: 's162', speaker: "旁白", text: "快感如暖流般湧來，她閉眼輕喘，呻吟聲變得柔軟而主動接受。", nextId: "s163" },
+  's163': { id: 's163', speaker: "旁白", text: "訓練師D加快節奏，肉棒次次深入，摩擦敏感點帶來連續愉悅波浪。", nextId: "s164" },
+  's164': { id: 's164', speaker: "訓練師D", text: "叫出來，說你有多爽！", nextId: "s165" },
+  's165': { id: 's165', speaker: "瑟蕾娜", text: "啊啊……好舒服……再深一點……不要停……", nextId: "s166" },
+  's166': { id: 's166', speaker: "旁白", text: "他突然將她整個人壓倒草地，上身緊貼她汗濕豐滿胸部，乳肉被壓得變形。", nextId: "s167" },
+  's167': { id: 's167', speaker: "旁白", text: "雙手固定她雙腿大開，腰部狂野衝刺，發出響亮啪啪聲與咕啾水響。", nextId: "s168" },
+  's168': { id: 's168', speaker: "訓練師D", text: "要射了！全部射進去，灌滿你的子宮！", nextId: "s169" },
+  's169': { id: 's169', speaker: "旁白", text: "肉棒在深處劇烈膨脹，低吼中大量精液強勁噴射進子宮最深處。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/1a57c811-5a8b-4cbc-8311-1c46c28d54d8.png", nextId: "s170" },
+  's170': { id: 's170', speaker: "旁白", text: "滾燙白濁一股股灌滿內壁，溢出穴口染濕草地、大腿根部與臀下。", nextId: "s171" },
+  's171': { id: 's171', speaker: "瑟蕾娜", text: "啊啊……好滿……射進來了……好燙好舒服……", nextId: "s172" },
+  's172': { id: 's172', speaker: "瑟蕾娜", text: "又要去了……高潮了……停不下來……啊啊啊！！！", nextId: "s173" },
+  's173': { id: 's173', speaker: "旁白", text: "她高潮連連，全身痙攣不止，蜜穴緊縮吸吮肉棒，像要榨乾最後一滴。", nextId: "s174" },
+  's174': { id: 's174', speaker: "旁白", text: "乳汁從雙乳狂噴，灑在兩人身上與地面，形成大片甜膩濕潤區域。", nextId: "s175" },
+  's175': { id: 's175', speaker: "訓練師D", text: "爽吧？看你噴奶噴得像泉水一樣！", nextId: "s176" },
+  's176': { id: 's176', speaker: "旁白", text: "更多訓練師湧上前来，輪番享用她完全軟化的身體。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/9d37c245-0b66-4daa-bd07-91b8e5fc8667.png", nextId: "s177" },
+  's177': { id: 's177', speaker: "訓練師E", text: "輪到我了，小穴還在流精液呢。", nextId: "s178" },
+  's178': { id: 's178', speaker: "訓練師F", text: "我來幹後面，這小屁眼也該開發了。", nextId: "s179" },
+  's179': { id: 's179', speaker: "旁白", text: "第五位、第六位、第七位……肉棒不斷插入滿是精液的蜜穴與後庭。", nextId: "s180" },
+  's180': { id: 's180', speaker: "訓練師G", text: "嘴巴別閒著，含住我的！", nextId: "s181" },
+  's181': { id: 's181', speaker: "旁白", text: "他們抓住她金髮深喉抽插，揉捏噴奶雙乳，或猛插濕潤孔洞。", nextId: "s182" },
+  's182': { id: 's182', speaker: "訓練師H", text: "叫啊！說你愛被我們輪！", nextId: "s183" },
+  's183': { id: 's183', speaker: "瑟蕾娜", text: "（含糊呻吟）嗯咕……好多……射進來……都射進來吧……", nextId: "s184" },
+  's184': { id: 's184', speaker: "旁白", text: "精液不斷射進體內，灌滿子宮、腸道與口腔，溢出每個孔洞與嘴角。", nextId: "s185" },
+  's185': { id: 's185', speaker: "旁白", text: "她身體被翻來覆去，各種姿勢被輪流佔有，快感無間斷地席捲。", nextId: "s186" },
+  's186': { id: 's186', speaker: "旁白", text: "哭叫早已轉為滿足的嬌喘，再轉為無意識的長吟與身體顫抖。", nextId: "s187" },
+  's187': { id: 's187', speaker: "訓練師I", text: "最後一發！接好！", nextId: "s188" },
+  's188': { id: 's188', speaker: "旁白", text: "最終，所有人都滿足離開，森林恢復短暫寧靜，只剩蟲鳴鳥叫。", backgroundImage: "https://image.tensorartassets.com/cdn-cgi/image/anim=true,plain=false,w=1024,f=jpeg,q=85/posts/images/699751645688397825/fbbbc8c8-91f8-4f28-8e8b-85deac060e6c.png", nextId: "s189" },
+  's189': { id: 's189', speaker: "旁白", text: "瑟蕾娜虛脫地躺在濕潤草地上，金髮散亂沾滿泥土、草葉與濃稠精液。", nextId: "s190" },
+  's190': { id: 's190', speaker: "旁白", text: "雪白胴體滿是斑駁白濁，胸前、腹部、背部、大腿內側、臉頰到處黏膩狼藉。", nextId: "s191" },
+  's191': { id: 's191', speaker: "旁白", text: "乳汁從腫脹乳頭緩緩滴落，與精液混合成一片淫靡而甜膩的液體。", nextId: "s192" },
+  's192': { id: 's192', speaker: "旁白", text: "蜜穴與後庭微微張開，精液汩汩流出，在草地上形成小水窪。", nextId: "s193" },
+  's193': { id: 's193', speaker: "旁白", text: "她雙眼失焦，紅唇微張，呼吸急促而淺短，身體偶爾輕輕抽搐。", nextId: "s194" },
+  's194': { id: 's194', speaker: "旁白", text: "陽光灑在她狼狽卻誘人的身軀上，映照出每一道精液與乳汁的濕亮痕跡。", nextId: "s195" },
+  's195': { id: 's195', speaker: "旁白", text: "一切結束，她只能無力躺在那裡，腦中一片空白，等待遙遠的力氣恢復。", nextId: "end" },
+
+  // 結局
+  'end': { 
+    id: 'end',
+    speaker: "旁白", 
+    text: "BAD END", 
+    choices: [
+      { id: "restart", text: "重新開始", action: "start" }
+    ]
+  }
+};
+
+// Simulate async API call delay
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+export const startNewStory = async (theme?: string): Promise<StorySegment> => {
+  await delay(300); // Simulate loading
+  return SCRIPT_NODES['start'];
+};
+
+export const continueStory = async (history: HistoryItem[], userAction: string): Promise<StorySegment> => {
+  await delay(100); // Fast transition
+  
+  const nextNode = SCRIPT_NODES[userAction];
+  
+  if (!nextNode) {
+    if (userAction === 'start') return SCRIPT_NODES['start'];
+    if (SCRIPT_NODES[userAction]) return SCRIPT_NODES[userAction];
+
+    // Fallback error node
+    return {
+      id: 'error',
+      speaker: 'System',
+      text: 'Error: Scene not found.',
+      choices: [{ id: 'reset', text: 'Reset', action: 'start' }]
+    };
+  }
+
+  return nextNode;
+};
+
+export const getNodeById = async (id: string): Promise<StorySegment | null> => {
+    return SCRIPT_NODES[id] || null;
+};
